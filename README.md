@@ -77,10 +77,8 @@ Leininger et al., ICRA 2024
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/rayguan97/GANav-offroad)
 
 
-
-
 ### Dataset
 - [RELLIS-3D](https://www.unmannedlab.org/research/RELLIS-3D) : Data with Stereo Camera images, LiDAR pointclouds, GPS/IMU  
-- [RUGD](http://rugd.vision/) : <b> Video dataset annotated with pixel-wise labels </b>
+- [RUGD](http://rugd.vision/) : Video dataset annotated with pixel-wise labels
 - [BotanicGarden](https://github.com/robot-pesg/BotanicGarden) : Stereo camera images, LiDAR pointclouds, GPS/IMU, Wheel encoders
 - [GOOSE](https://goose-dataset.de/) : Data with Stereo Camera images, LiDAR pointclouds, GPS/IMU
