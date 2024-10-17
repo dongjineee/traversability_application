@@ -1,12 +1,11 @@
-## 코드 있는거
-### 2023 - 2024 Papers
+## Travel application
+
 
 - [Follow the Footprints: Self-supervised Traversability Estimation for Off-road Vehicle Navigation based on Geometric and Visual Cues](), Jeon et al., ICRA 2024 | [arXiv](https://arxiv.org/abs/2402.15363)  | [bibtex](./traversability-papers-2023-2024.bib#L60-L65) | [Github](https://github.com/yurimjeon1892/FtFoot)
 
 input : 
 <br>
-output : 
-
+output :
 
 - [Learning Self-Supervised Traversability With Navigation Experiences of Mobile Robots: A Risk-Aware Self-Training Approach](https://ieeexplore.ieee.org/document/10468651), Cho et al., RA-L 2024| [bibtex](./traversability-papers-2023-2024.bib#L9-L15) | [Github](https://github.com/Ikhyeon-Cho/LeSTA)
 
@@ -21,6 +20,21 @@ input :
 <br>
 output : 
 
+### pkg run 
+``` bash
+## pkg install ##
+    cd ~/wild_visual_navigation/wild_visual_navigation/docker
+    docker compose -f docker-compose-gui-nvidia.yaml build
+    docker compose -f docker-compose-gui-nvidia.yaml up -d
+    docker compose -f docker-compose-gui-nvidia.yaml exec wvn_nvidia /bin/bash
+    source first_run.sh
+
+## sim run ##
+    roslaunch wild_visual_navigation_jackal sim.launch 
+## travel run ##
+    roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
+
+```
 
 - [Probabilistic Traversability Model for Risk-Aware Motion Planning in Off-Road Environments](https://ieeexplore.ieee.org/abstract/document/10341350?casa_token=_DR0F3T-v2AAAAAA:5y33BO40ZgI59d21sLqW25-Xk6-XIo4fzkQhJHq4ebyRJUSm8ThI21VISBTkbcGOjDLj84eY), Cai et al., IROS 2023 | [arXiv](https://arxiv.org/abs/2210.00153) | [bibtex](./traversability-papers-2023-2024.bib#L67-L74) | [Github](https://github.com/mit-acl/mppi_numba)
 
