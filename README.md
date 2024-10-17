@@ -35,7 +35,6 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 ---
 
 ### Learning Self-Supervised Traversability With Navigation Experiences of Mobile Robots: A Risk-Aware Self-Training Approach  
-Cho et al., RA-L 2024  
 [![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./traversability-papers-2023-2024.bib#L9-L15) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/Ikhyeon-Cho/LeSTA)
 
@@ -49,7 +48,6 @@ Cho et al., RA-L 2024
 ---
 
 ### WayFASTER: A Self-Supervised Traversability Prediction for Increased Navigation Awareness  
-Gasparino et al., ICRA 2024  
 [![arXiv](https://img.shields.io/badge/arXiv-2402.00683-b31b1b?logo=arXiv)](https://arxiv.org/abs/2402.00683) 
 [![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./traversability-papers-2023-2024.bib#L137-L142) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/matval/wayfaster)
@@ -57,7 +55,6 @@ Gasparino et al., ICRA 2024
 ---
 
 ### Gaussian Process-Based Traversability Analysis for Terrain Mapless Navigation  
-Leininger et al., ICRA 2024  
 [![arXiv](https://img.shields.io/badge/arXiv-2403.19010-b31b1b?logo=arXiv)](https://arxiv.org/abs/2403.19010) 
 [![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./traversability-papers-2023-2024.bib#L144-L149) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/abeleinin/gp-navigation)
