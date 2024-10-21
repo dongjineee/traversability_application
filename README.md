@@ -1,8 +1,10 @@
 # Travel application
-## Clone
+#### Clone
 ```bash
 git clone --recursive https://github.com/dongjineee/traversability_application.git
 ```
+---
+
 #### Transfomer based
 <details>
   <summary>Fast Traversability Estimation for Wild Visual Navigation</summary>
@@ -33,6 +35,11 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 </details>
 
 ---
+
+#### Update soon ..
+<details>
+  <summary>Update soon ..</summary>
+
 ### Follow the Footprints: Self-supervised Traversability Estimation for Off-road Vehicle Navigation based on Geometric and Visual Cues  
 [![arXiv](https://img.shields.io/badge/arXiv-2402.15363-b31b1b?logo=arXiv)](https://arxiv.org/abs/2402.15363)
 [![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./traversability-papers-2023-2024.bib#L60-L65) 
@@ -79,6 +86,7 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 [![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./terrain_traversability_analysis.bib#L280-L289) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/rayguan97/GANav-offroad)
 
+</details>
 
 ### Dataset
 - [RELLIS-3D](https://www.unmannedlab.org/research/RELLIS-3D) : Data with Stereo Camera images, LiDAR pointclouds, GPS/IMU  
