@@ -1,3 +1,6 @@
 [submodule "wild_nav/wild_visual_navigation"]
 	path = wild_nav/wild_visual_navigation
 	url = https://github.com/dongjineee/wild_visual_navigation.git
+[submodule "wild_nav/self_supervised_segmentation"]
+	path = wild_nav/self_supervised_segmentation
+	url = https://github.com/dongjineee/self_supervised_segmentation.git
