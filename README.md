@@ -13,7 +13,7 @@ git clone --recursive https://github.com/dongjineee/traversability_application.g
 [![arXiv](https://img.shields.io/badge/arXiv-2305.08510-b31b1b?logo=arXiv)](https://arxiv.org/abs/2305.08510)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/leggedrobotics/wild_visual_navigation)
 
-#### Package Installation
+#### Package RUN
 ```bash
 # Navigate to the docker folder and build the environment
 cd traversability_application/wild_nav/wild_visual_navigation/docker
