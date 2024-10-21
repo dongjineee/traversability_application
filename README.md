@@ -1,5 +1,8 @@
 # Travel application
-
+## Clone
+```bash
+git clone --recursive https://github.com/dongjineee/traversability_application.git
+```
 ### Fast Traversability Estimation for Wild Visual Navigation
 
 [![PDF](https://img.shields.io/badge/Paper-RSS--Proceedings-blue?logo=readme)](https://www.roboticsproceedings.org/rss19/p054.html)
