@@ -1,4 +1,4 @@
-## Traversability_application
+## Traversability_Application
 #### Clone
 ```bash
 git clone --recursive https://github.com/dongjineee/traversability_application.git
