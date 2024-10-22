@@ -24,22 +24,19 @@ After cloning, follow the instructions on that page to run the Docker setup.
 
 ### Package RUN
 ```bash
-# Navigate to the docker folder and build the environment
+##wvn docker setting
 cd traversability_application/wild_nav/wild_visual_navigation/docker
 docker compose -f docker-compose-gui-nvidia.yaml build
-
-# Start the container in detached mode
 docker compose -f docker-compose-gui-nvidia.yaml up -d
-
-# Access the running container's shell
 docker compose -f docker-compose-gui-nvidia.yaml exec wvn_nvidia /bin/bash
-
-# Run the initial setup script
 source first_run.sh
 
-roslaunch wild_visual_navigation_jackal sim.launch
-roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
+##RUN WVN
+# In the sim_container
+roslaunch husky_gazebo husky_lake.launch rviz:=wild_nav
 
+# In the wvn_container
+roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 ```
 </details>
 
