@@ -1,4 +1,12 @@
 # Traversability_Application
+
+### System Information
+
+- **Operating System**: Ubuntu 20.04
+- **ROS Version**: Noetic
+- **CUDA Version**: 12.0
+- **GPU**: NVIDIA 3090ti
+
 ### Clone
 ```bash
 git clone --recursive https://github.com/dongjineee/traversability_application.git
