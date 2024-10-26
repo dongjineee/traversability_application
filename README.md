@@ -48,59 +48,73 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 ```
 </details>
 
----
-
-### Update soon ..
 <details>
-  <summary>Update soon ..</summary>
+    <summary>Follow the Footprints: Self-supervised Traversability Estimation for Off-road Vehicle Navigation based on Geometric and Visual Cues  </summary>
 
-### Follow the Footprints: Self-supervised Traversability Estimation for Off-road Vehicle Navigation based on Geometric and Visual Cues  
 [![arXiv](https://img.shields.io/badge/arXiv-2402.15363-b31b1b?logo=arXiv)](https://arxiv.org/abs/2402.15363)
 [![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./traversability-papers-2023-2024.bib#L60-L65) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/yurimjeon1892/FtFoot)
+</details>
 
----
-
-### Learning Self-Supervised Traversability With Navigation Experiences of Mobile Robots: A Risk-Aware Self-Training Approach  
-[![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./traversability-papers-2023-2024.bib#L9-L15) 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/Ikhyeon-Cho/LeSTA)
-
----
-
-### Probabilistic Traversability Model for Risk-Aware Motion Planning in Off-Road Environments  
-[![arXiv](https://img.shields.io/badge/arXiv-2210.00153-b31b1b?logo=arXiv)](https://arxiv.org/abs/2210.00153)
-[![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./traversability-papers-2023-2024.bib#L67-L74) 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/mit-acl/mppi_numba)
-
----
-
-### WayFASTER: A Self-Supervised Traversability Prediction for Increased Navigation Awareness  
+<details>
+  <summary>WayFASTER: A Self-Supervised Traversability Prediction for Increased Navigation Awareness       </summary>
+  
 [![arXiv](https://img.shields.io/badge/arXiv-2402.00683-b31b1b?logo=arXiv)](https://arxiv.org/abs/2402.00683) 
 [![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./traversability-papers-2023-2024.bib#L137-L142) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/matval/wayfaster)
 
+</details>
+
 ---
 
-### Gaussian Process-Based Traversability Analysis for Terrain Mapless Navigation  
+### Geometric based (Terrain structure) 
+<details>
+  <summary>Learning Self-Supervised Traversability With Navigation Experiences of Mobile Robots: A Risk-Aware Self-Training Approach    </summary>
+
+[![IEEE](https://img.shields.io/badge/IEEE-10468651-blue?logo=IEEE)](https://ieeexplore.ieee.org/document/10468651)
+[![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./traversability-papers-2023-2024.bib#L9-L15) 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/Ikhyeon-Cho/LeSTA)
+</details>
+<details>
+  <summary>Gaussian Process-Based Traversability Analysis for Terrain Mapless Navigation         </summary>
+  
 [![arXiv](https://img.shields.io/badge/arXiv-2403.19010-b31b1b?logo=arXiv)](https://arxiv.org/abs/2403.19010) 
 [![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./traversability-papers-2023-2024.bib#L144-L149) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/abeleinin/gp-navigation)
 
+</details>
+
 ---
 
-### These Maps are Made for Walking: Real-Time Terrain Property Estimation for Mobile Robots  
+### Semantic based
+<details>
+  <summary>These Maps are Made for Walking: Real-Time Terrain Property Estimation for Mobile Robots           </summary>
+  
 [![arXiv](https://img.shields.io/badge/arXiv-2205.12925-b31b1b?logo=arXiv)](https://arxiv.org/abs/2205.12925) 
 [![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./terrain_traversability_analysis.bib#L184-L193) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/roahmlab/sel_map)
+</details>
 
----
-
-### GA-Nav: Efficient Terrain Segmentation for Robot Navigation in Unstructured Outdoor Environments  
+<details>
+  <summary>GA-Nav: Efficient Terrain Segmentation for Robot Navigation in Unstructured Outdoor Environments             </summary>
+  
 [![arXiv](https://img.shields.io/badge/arXiv-2103.04233-b31b1b?logo=arXiv)](https://arxiv.org/abs/2103.04233) 
 [![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./terrain_traversability_analysis.bib#L280-L289) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/rayguan97/GANav-offroad)
-
 </details>
+
+---
+
+### Geometric + Semantic based
+<details>
+  <summary>Probabilistic Traversability Model for Risk-Aware Motion Planning in Off-Road Environments      </summary>
+  
+[![arXiv](https://img.shields.io/badge/arXiv-2210.00153-b31b1b?logo=arXiv)](https://arxiv.org/abs/2210.00153)
+[![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./traversability-papers-2023-2024.bib#L67-L74) 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/mit-acl/mppi_numba)
+</details>
+
+
 
 ### Dataset
 - [RELLIS-3D](https://www.unmannedlab.org/research/RELLIS-3D) : Data with Stereo Camera images, LiDAR pointclouds, GPS/IMU  
