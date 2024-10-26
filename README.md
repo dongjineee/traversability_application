@@ -114,7 +114,7 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/mit-acl/mppi_numba)
 </details>
 
-
+---
 
 ### Dataset
 - [RELLIS-3D](https://www.unmannedlab.org/research/RELLIS-3D) : Data with Stereo Camera images, LiDAR pointclouds, GPS/IMU  
