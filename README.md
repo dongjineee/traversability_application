@@ -22,7 +22,7 @@ https://github.com/dongjineee/husky
 After cloning, follow the instructions on that page to run the Docker setup.
 
 ---
-### Transfomer based
+### Image based
 <details>
   <summary>Fast Traversability Estimation for Wild Visual Navigation</summary>
   
