@@ -4,7 +4,7 @@
 
 - **Operating System**: Ubuntu 20.04
 - **ROS Version**: Noetic
-- **CUDA Version**: 12.0
+- **CUDA Version**: 12.1
 - **GPU**: NVIDIA 3090ti
 
 ### Clone
