@@ -67,7 +67,7 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 
 ---
 
-### Geometric based (Terrain structure) 
+### Geometric(Terrain structure) based 
 <details>
   <summary>Learning Self-Supervised Traversability With Navigation Experiences of Mobile Robots: A Risk-Aware Self-Training Approach    </summary>
 
