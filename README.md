@@ -89,7 +89,7 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/ganlumomo/traversability_labeling_ws)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/ganlumomo/MultiLayerMapping)
 </details>
-
+<details>
   <summary>These Maps are Made for Walking: Real-Time Terrain Property Estimation for Mobile Robots           </summary>
   
 [![arXiv](https://img.shields.io/badge/arXiv-2205.12925-b31b1b?logo=arXiv)](https://arxiv.org/abs/2205.12925) 
