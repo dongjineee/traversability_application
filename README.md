@@ -119,5 +119,3 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 ### Dataset
 - [RELLIS-3D](https://www.unmannedlab.org/research/RELLIS-3D) : Data with Stereo Camera images, LiDAR pointclouds, GPS/IMU  
 - [RUGD](http://rugd.vision/) : Video dataset annotated with pixel-wise labels
-- [BotanicGarden](https://github.com/robot-pesg/BotanicGarden) : Stereo camera images, LiDAR pointclouds, GPS/IMU, Wheel encoders
-- [GOOSE](https://goose-dataset.de/) : Data with Stereo Camera images, LiDAR pointclouds, GPS/IMU
