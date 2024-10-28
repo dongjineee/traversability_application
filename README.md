@@ -88,6 +88,13 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 
 ### Semantic based
 <details>
+  <summary>Multitask Learning for Scalable and Dense Multilayer Bayesian Map Inference           </summary>
+  
+[![arXiv](https://img.shields.io/badge/arXiv-2205.12925-b31b1b?logo=arXiv)](https://arxiv.org/abs/2106.14986) 
+[![BibTeX](https://img.shields.io/badge/bibtex-Citation-blue)](./terrain_traversability_analysis.bib#L184-L193) 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/roahmlab/sel_map)
+</details>
+
   <summary>These Maps are Made for Walking: Real-Time Terrain Property Estimation for Mobile Robots           </summary>
   
 [![arXiv](https://img.shields.io/badge/arXiv-2205.12925-b31b1b?logo=arXiv)](https://arxiv.org/abs/2205.12925) 
