@@ -93,6 +93,53 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
   
 [![arXiv](https://img.shields.io/badge/arXiv-2103.04233-b31b1b?logo=arXiv)](https://arxiv.org/abs/2103.04233) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/rayguan97/GANav-offroad)
+
+#### 1. Dataset download
+```
+GANav
+├── data
+│   ├── rellis
+│   │   │── test.txt
+│   │   │── train.txt
+│   │   │── val.txt
+│   │   │── annotation
+│   │   │   ├── 00000 & 00001 & 00002 & 00003 & 00004 
+│   │   │── image
+│   │   │   ├── 00000 & 00001 & 00002 & 00003 & 00004 
+│   ├── rugd
+│   │   │── test_ours.txt
+│   │   │── test.txt
+│   │   │── train_ours.txt
+│   │   │── train.txt
+│   │   │── val_ours.txt
+│   │   │── val.txt
+│   │   │── RUGD_annotations
+│   │   │   ├── creek & park-1/2/8 & trail-(1 & 3-7 & 9-15) & village
+│   │   │── RUGD_frames-with-annotations
+│   │   │   ├── creek & park-1/2/8 & trail-(1 & 3-7 & 9-15) & village
+│   ├── goose
+│   │   ├── goose_label_mapping.csv
+│   │   ├── images
+│   │   │   ├── train
+│   │   │   └── val
+│   │   ├── labels
+│   │   │   ├── train
+│   │   │   └── val
+│   │   ├── LICENSE
+│   │   ├── test.txt
+│   │   ├── train.txt
+│   │   │── val.txt
+│   ├── sim_lake
+│   │   │── test.txt
+│   │   │── train.txt
+│   │   │── val.txt
+│   │   │── annotation
+│   │   └── image
+├── configs
+├── tools
+```
+#### 2. Docker run
+
 </details>
 
 ---
