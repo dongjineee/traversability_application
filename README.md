@@ -82,19 +82,27 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 
 ### Semantic based
 <details>
-  <summary>These Maps are Made for Walking: Real-Time Terrain Property Estimation for Mobile Robots           </summary>
+  <summary>These Maps are Made for Walking: Real-Time Terrain Property Estimation for Mobile Robots </summary>
   
 [![arXiv](https://img.shields.io/badge/arXiv-2205.12925-b31b1b?logo=arXiv)](https://arxiv.org/abs/2205.12925) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/roahmlab/sel_map)
 </details>
 
 <details>
-  <summary>GA-Nav: Efficient Terrain Segmentation for Robot Navigation in Unstructured Outdoor Environments             </summary>
+  <summary>GA-Nav: Efficient Terrain Segmentation for Robot Navigation in Unstructured Outdoor Environments </summary>
   
 [![arXiv](https://img.shields.io/badge/arXiv-2103.04233-b31b1b?logo=arXiv)](https://arxiv.org/abs/2103.04233) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/rayguan97/GANav-offroad)
 
 #### 1. Dataset download
+
+Please visit the official websites of the real-world dataset (RELLIS-3D) and the simulation dataset (NEGS-UGV) to download the files. 
+For Data-set, we use ID annotations instead of color annotations.
+Please refer to the GANav Dataset Directory.
+
+<details>
+<summary> <b> GANav Dataset Directory </b> </summary>
+
 ```
 GANav
 ├── data
@@ -138,8 +146,60 @@ GANav
 ├── configs
 ├── tools
 ```
-#### 2. Docker run
 
+</details>
+
+#### 2. Group semantic seg RUN
+
+```bash
+##=========== wvn docker setting ===========##
+cd traversability_application/wild_nav/wild_visual_navigation/docker
+docker compose -f docker-compose-gui-nvidia.yaml build
+docker compose -f docker-compose-gui-nvidia.yaml up -d
+docker compose -f docker-compose-gui-nvidia.yaml exec ga_nav /bin/bash
+
+cd src/GANav-offroad/
+pip install -e .
+
+##=========== RUN Data processing ===========##
+##for rellis-3d dataset
+#run relable group4
+python ./tools/convert_datasets/rellis_relabel4.py
+#run relable group6
+python ./tools/convert_datasets/rellis_relabel6.py
+
+##=========== RUN Training ===========##
+##for rellis-3d dataset(real_world)
+python ./tools/train.py ./configs/ours/rellis_group6_rugd.py
+##for lake dataset(simulation)
+python ./tools/train.py ./configs/ours/rellis_group6_rugd.py
+
+##=========== RUN Eval ===========##
+##for rellis-3d dataset
+python ./tools/test.py ./trained_models/rellis_group6/ganav_rellis.py \
+          ./work_dirs/ganav_group6_rellis/latest.pth --eval=mIoU
+##for lake dataset
+python ./tools/test.py ./trained_models/lake_group6/ganav_lake_6.py \
+          ./work_dirs/ganav_group6_lake/latest.pth --eval=mIoU
+
+##=========== RUN Visualize ===========##
+python ./tools/visualize.py <img_dir> <config> <checkpoint>
+##for rellis-3d dataset
+python ./tools/visualize.py ./data/rellis/image/00000 ./configs/ours/ganav_group6_rellis.py ./work_dirs/ganav_group6_rellis/latest.pth
+##for lake dataset
+python ./tools/visualize.py ./data/lake/image ./configs/ours/ganav_group6_lake.py ./work_dirs/ganav_group6_lake/latest.pth
+```
+
+
+#### 3. ROS_PKG RUN
+```bash
+
+# In the sim_container
+roslaunch husky_gazebo husky_lake.launch rviz:=ga_nav
+
+# In the ga_nav_container
+roslaunch ga_nav ga_nav.launch
+```
 </details>
 
 ---
@@ -162,6 +222,8 @@ GANav
 
 ---
 
-### Dataset
+### Real World - Dataset
 - [RELLIS-3D](https://www.unmannedlab.org/research/RELLIS-3D) : Data with Stereo Camera images, LiDAR pointclouds, GPS/IMU  
 - [RUGD](http://rugd.vision/) : Video dataset annotated with pixel-wise labels
+### Simulation World - Dataset
+- [NEGS-UGV](https://www.uma.es/robotics-and-mechatronics/info/132852/negs-ugv-dataset) : semantic & rgb images, seamantic & raw Lidar pointsclouds
