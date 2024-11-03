@@ -137,7 +137,7 @@ GANav
 │   │   ├── test.txt
 │   │   ├── train.txt
 │   │   │── val.txt
-│   ├── sim_lake
+│   ├── lake
 │   │   │── test.txt
 │   │   │── train.txt
 │   │   │── val.txt
@@ -190,10 +190,8 @@ python ./tools/visualize.py ./data/rellis/image/00000 ./configs/ours/ganav_group
 python ./tools/visualize.py ./data/lake/image ./configs/ours/ganav_group6_lake.py ./work_dirs/ganav_group6_lake/latest.pth
 ```
 
-
 #### 3. ROS_PKG RUN
 ```bash
-
 # In the sim_container
 roslaunch husky_gazebo husky_lake.launch rviz:=ga_nav
 
