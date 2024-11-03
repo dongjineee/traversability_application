@@ -4,3 +4,6 @@
 [submodule "wild_nav/self_supervised_segmentation"]
 	path = wild_nav/self_supervised_segmentation
 	url = https://github.com/dongjineee/self_supervised_segmentation.git
+[submodule "ga_nav/GANav-offroad"]
+	path = ga_nav/GANav-offroad
+	url = https://github.com/dongjineee/GANav-offroad.git
