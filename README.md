@@ -165,19 +165,22 @@ pip install -e .
 ##for rellis-3d dataset
 #run relable group4
 python ./tools/convert_datasets/rellis_relabel4.py
+
 #run relable group6
 python ./tools/convert_datasets/rellis_relabel6.py
 
 ##=========== RUN Training ===========##
 ##for rellis-3d dataset(real_world)
-python ./tools/train.py ./configs/ours/rellis_group6_rugd.py
+python ./tools/train.py ./configs/ours/ganav_group6_rellis.py
+
 ##for lake dataset(simulation)
-python ./tools/train.py ./configs/ours/rellis_group6_rugd.py
+python ./tools/train.py ./configs/ours/ganav_group6_lake.py
 
 ##=========== RUN Eval ===========##
 ##for rellis-3d dataset
 python ./tools/test.py ./trained_models/rellis_group6/ganav_rellis.py \
           ./work_dirs/ganav_group6_rellis/latest.pth --eval=mIoU
+
 ##for lake dataset
 python ./tools/test.py ./trained_models/lake_group6/ganav_lake_6.py \
           ./work_dirs/ganav_group6_lake/latest.pth --eval=mIoU
@@ -186,6 +189,7 @@ python ./tools/test.py ./trained_models/lake_group6/ganav_lake_6.py \
 python ./tools/visualize.py <img_dir> <config> <checkpoint>
 ##for rellis-3d dataset
 python ./tools/visualize.py ./data/rellis/image/00000 ./configs/ours/ganav_group6_rellis.py ./work_dirs/ganav_group6_rellis/latest.pth
+
 ##for lake dataset
 python ./tools/visualize.py ./data/lake/image ./configs/ours/ganav_group6_lake.py ./work_dirs/ganav_group6_lake/latest.pth
 ```
