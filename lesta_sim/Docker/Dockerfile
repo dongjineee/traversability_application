@@ -67,6 +67,8 @@ RUN apt-get update && apt-get install --yes \
     wget \
     zip \
     zsh
+
+RUN apt-get update && apt-get install ros-noetic-grid-map -y
     
 # Fix networkx compatibility for Python 3.8 before installing PyTorch
 RUN pip install 'networkx<3.0'
