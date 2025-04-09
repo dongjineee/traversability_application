@@ -1,0 +1,8 @@
+services:
+  lesta:
+    extends:
+      file: docker-compose.yaml
+      service: lesta
+    environment:
+     - DISPLAY=${DISPLAY}
+     - QT_X11_NO_MITSHM=1
