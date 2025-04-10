@@ -5,13 +5,13 @@ cd $GAZEBO_WS/src/husky/setup
 source first_run.sh
 
 # [Optional] Prepare moon world
-# GAZEBO_MAPS_DIR="$GAZEBO_WS/src/husky/husky_gazebo/gazebo_maps"
-# mkdir -p $GAZEBO_MAPS_DIR
+ GAZEBO_MAPS_DIR="$GAZEBO_WS/src/husky/husky_gazebo/gazebo_maps"
+ mkdir -p $GAZEBO_MAPS_DIR
 
 # [Optional] Copy moon world
-# if [ -d "/workspace/docker_root/moon" ]; then
-#     cp -r /workspace/docker_root/moon "$GAZEBO_MAPS_DIR/"
-# fi
+ if [ -d "/workspace/docker_root/moon" ]; then
+     cp -r /workspace/docker_root/moon "$GAZEBO_MAPS_DIR/"
+ fi
 
 cd $GAZEBO_WS/src
 if [ ! -d "velodyne_simulator" ]; then
