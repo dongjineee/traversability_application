@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  lesta:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lesta
+    container_name: lesta
+    privileged: true
+    network_mode: host
+    volumes:
+      - /home/miiiiiryeong/traversability_application/lesta_sim:/workspace/docker_root
+      - /dev/dri:/dev/dri
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /tmp/.docker.xauth:/tmp/.docker.xauth:rw
+      - /usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:ro
+      - /usr/lib/x86_64-linux-gnu/libGL.so.1:/usr/lib/x86_64-linux-gnu/libGL.so.1:ro
+    stdin_open: true
+    tty: true
+    entrypoint: ["/workspace/docker_root/Docker/lesta_entrypoint.sh"]

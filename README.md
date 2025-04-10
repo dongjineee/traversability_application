@@ -70,6 +70,162 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 
 [![IEEE](https://img.shields.io/badge/IEEE-10468651-blue?logo=IEEE)](https://ieeexplore.ieee.org/document/10468651)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/Ikhyeon-Cho/LeSTA)
+
+# LeSTA with Gazebo Simulation Setup
+
+This guide walks you through building and launching the LeSTA with Gazebo simulation environment using Docker.
+
+---
+
+## 1. Clone the Repository
+
+```bash
+cd lesta_sim
+```
+
+---
+
+## 2. Docker Setup
+
+### 2.1. Make entrypoint scripts executable:
+
+```bash
+cd Docker
+chmod +x lesta_entrypoint.sh
+cd ..
+```
+
+---
+
+### 2.2. Build and run the container
+
+**Before running**, edit the `volumes` section in `docker-compose.yaml` to match your absolute project path.
+
+You can get the full path using:
+
+```bash
+pwd
+```
+
+**Example `volumes` section:**
+
+```yaml
+volumes:
+  - /home/yourname/path/to/lesta_sim:/workspace/docker_root
+```
+
+Make sure the first path points to your current directory (`lesta_sim`).
+
+Then:
+
+```bash
+cd Docker
+```
+
+- For Docker Compose v1:
+  ```bash
+  docker-compose up --build
+  ```
+
+- For Docker Compose v2:
+  ```bash
+  docker compose up --build
+  ```
+
+---
+
+## 3. Start the container (if it was stopped):
+
+```bash
+docker start lesta
+docker attach lesta
+```
+
+---
+
+## 4. CMake Fix Required for building LeSTA
+
+Before building the workspace, edit:
+
+```
+/workspace/docker_root/lesta_ws/src/LeSTA/lesta_ros/CMakeLists.txt
+```
+
+Move the following block **above all other `find_package(...)` calls**:
+
+```cmake
+find_package(catkin REQUIRED COMPONENTS
+    height_mapping_core
+    roscpp
+    tf2_ros
+    pcl_conversions
+    grid_map_ros
+    message_generation
+)
+```
+
+---
+
+## 5. Build the Workspace
+
+```bash
+cd /workspace/docker_root/lesta_ws
+catkin build lesta
+source devel/setup.bash
+```
+
+---
+
+## 6. Install pylesta Package
+
+```bash
+cd /workspace/docker_root/lesta_ws/src/LeSTA
+pip install -e pylesta
+```
+
+---
+
+## 7. Gazebo Simulation
+
+### 7.1. Make Gazebo entrypoints executable:
+
+```bash
+cd /workspace/docker_root/Docker
+chmod +x gazebo_entrypoint_1.sh gazebo_entrypoint_2.sh
+```
+
+
+
+### 7.2. Run the Git clone & environment setup:
+
+```bash
+./gazebo_entrypoint_1.sh
+```
+
+> ⚠️ **TODO:** You must edit the workspace directory and `GAZEBO_MODEL_PATH` inside:  
+> `/workspace/docker_root/gazebo_ws/src/husky/setup/first_run.sh`
+
+
+
+### 7.3. After editing:
+    
+> [OPTIONAL] edit the custom world path inside gazebo_entrypoint_2.sh and uncomment lines before running:
+```bash
+cd /workspace/docker_root/Docker && ./gazebo_entrypoint_2.sh
+```
+---
+## 8. Run
+If you have completed all the steps above,
+you can refer to the following project pages for execution commands:
+
+- LeSTA: https://github.com/Ikhyeon-Cho/LeSTA.git
+
+- Husky: https://github.com/dongjineee/husky.git
+
+Simply follow the instructions provided on each project page to run the system.
+
+---
+
 </details>
 <details>
   <summary>Gaussian Process-Based Traversability Analysis for Terrain Mapless Navigation         </summary>
