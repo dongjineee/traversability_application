@@ -18,6 +18,4 @@ services:
       - /usr/lib/x86_64-linux-gnu/libGL.so.1:/usr/lib/x86_64-linux-gnu/libGL.so.1:ro
     stdin_open: true
     tty: true
-    privileged: true
-    network_mode: host
     entrypoint: ["/workspace/docker_root/Docker/lesta_entrypoint.sh"]
