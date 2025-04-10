@@ -111,11 +111,10 @@ pwd
 
 ```yaml
 volumes:
-  - /tmp/.X11-unix:/tmp/.X11-unix
   - /home/yourname/path/to/lesta_sim:/workspace/docker_root
 ```
 
-Make sure the second path points to your current directory (`lesta_sim`).
+Make sure the first path points to your current directory (`lesta_sim`).
 
 Then:
 
