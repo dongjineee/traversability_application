@@ -7,3 +7,6 @@
 [submodule "ga_nav/GANav-offroad"]
 	path = ga_nav/GANav-offroad
 	url = https://github.com/dongjineee/GANav-offroad.git
+[submodule "LeSTA"]
+	path = LeSTA
+	url = https://github.com/dongjineee/LeSTA.git
