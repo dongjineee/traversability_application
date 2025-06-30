@@ -70,6 +70,35 @@ roslaunch wild_visual_navigation_jackal wild_visual_navigation.launch
 
 [![IEEE](https://img.shields.io/badge/IEEE-10468651-blue?logo=IEEE)](https://ieeexplore.ieee.org/document/10468651)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/Ikhyeon-Cho/LeSTA)
+
+### Package RUN
+```bash
+cd ~/LeSTA/docker
+##image build
+docker compose -f docker-compose-gui-nvidia.yaml build
+##create container
+docker compose -f docker-compose-gui-nvidia.yaml up -d
+docker exec -it docker-lesta-1 /bin/bash
+
+##in container
+cd ~/lesta_ws/
+catkin build
+source devel/setup.bash
+
+## label_generate ##
+roslaunch lesta label_generation.launch
+rosservice call /lesta/save_label_map "train_set.pcd" "/root/lesta_ws/src/LeSTA/data/train"
+rosservice call /lesta/save_label_map "val_set.pcd" "/root/lesta_ws/src/LeSTA/data/val"
+
+## train ##
+cd /root/lesta_ws/src/LeSTA
+python3 pylesta/tools/train.py
+
+## travel predict ##
+roslaunch lesta traversability_prediction.launch
+roslaunch lesta traversability_mapping.launch
+```
+
 </details>
 <details>
   <summary>Gaussian Process-Based Traversability Analysis for Terrain Mapless Navigation         </summary>
